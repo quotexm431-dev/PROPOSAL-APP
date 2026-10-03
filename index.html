@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Maryam ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ff4f81,#c850c0,#6a5acd);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    bottom:-60px;
+    font-size:28px;
+    animation:float 7s linear infinite;
+    opacity:.8;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+    20%{opacity:1;}
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+.card{
+    width:min(90%,650px);
+    max-height:90vh;
+    overflow:auto;
+    padding:45px 30px;
+    text-align:center;
+    background:rgba(255,255,255,.17);
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:32px;
+    backdrop-filter:blur(18px);
+    box-shadow:0 25px 70px rgba(0,0,0,.35);
+    z-index:2;
+    animation:cardIn 1s ease;
+}
+
+@keyframes cardIn{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.emoji{
+    font-size:70px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.13);}
+}
+
+h1{
+    margin:18px 0;
+    font-size:44px;
+    text-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.name{
+    color:#fff;
+    text-shadow:0 0 18px rgba(255,255,255,.8);
+}
+
+p{
+    font-size:19px;
+    line-height:1.7;
+    margin-bottom:28px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+button{
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#yesBtn{
+    background:white;
+    color:#e91e63;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+#yesBtn:hover{
+    transform:scale(1.12);
+}
+
+#noBtn{
+    background:rgba(0,0,0,.35);
+    color:white;
+}
+
+#noBtn:hover{
+    transform:scale(.95);
+}
+
+.small{
+    margin-top:25px;
+    font-size:14px;
+    opacity:.8;
+}
+
+.hidden{
+    display:none;
+}
+
+.big-heart{
+    font-size:100px;
+    animation:pulse 1s infinite;
+}
+
+.final h1{
+    font-size:42px;
+}
+
+.final p{
+    font-size:20px;
+}
+
+.rose{
+    font-size:40px;
+}
+
+.message{
+    background:rgba(255,255,255,.10);
+    padding:22px;
+    border-radius:20px;
+    margin-top:20px;
+    text-align:left;
+}
+
+.message p{
+    margin:0;
+    font-size:18px;
+}
+
+@media(max-width:500px){
+    h1{font-size:34px;}
+    p{font-size:17px;}
+    .card{padding:35px 20px;}
+    .message p{font-size:16px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <div class="heart" style="left:8%;animation-delay:0s;">❤️</div>
+    <div class="heart" style="left:22%;animation-delay:2s;">💖</div>
+    <div class="heart" style="left:38%;animation-delay:4s;">💕</div>
+    <div class="heart" style="left:55%;animation-delay:1s;">❤️</div>
+    <div class="heart" style="left:72%;animation-delay:3s;">💗</div>
+    <div class="heart" style="left:90%;animation-delay:5s;">💖</div>
+</div>
+
+<div class="card" id="mainCard">
+
+    <div class="emoji">💌</div>
+
+    <h1>
+        Hey <span class="name">Maryam</span> ❤️
+    </h1>
+
+    <p>
+        I made this little surprise just for you... ✨
+        <br>
+        Because there is something special
+        I have been wanting to ask you. 🌹
+        <br><br>
+        <b>Maryam, will you be mine? ❤️</b>
+    </p>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="sayYes()">YES ❤️</button>
+        <button id="noBtn" onclick="sayNo()">NO 🙈</button>
+    </div>
+
+    <div class="small">
+        Made with ❤️ especially for Maryam
+    </div>
+
+</div>
+
+<div class="card hidden final" id="finalCard">
+
+    <div class="big-heart">❤️</div>
+
+    <div class="rose">🌹✨</div>
+
+    <h1>
+        Maryam Said YES! 🎉
+    </h1>
+
+    <div class="message">
+
+        <p>
+            <b>Maryam ❤️</b>
+            <br><br>
+
+            I don't want to bother you or make you feel uncomfortable.
+            I just wanted to honestly tell you what is in my heart.
+            <br><br>
+
+            I genuinely care about you, and my feelings for you
+            come from the deepest part of my heart. ❤️
+            <br><br>
+
+            I promise to respect your feelings, your choices,
+            and your boundaries.
+            <br><br>
+
+            I would never want my feelings to become a reason
+            for your discomfort.
+            I simply want to be someone who cares for you,
+            respects you, supports you, and brings a little
+            happiness into your life. 🌹
+            <br><br>
+
+            Whatever your answer is, I will respect it. ❤️
+        </p>
+
+    </div>
+
+    <div class="rose">💖 🌹 💖</div>
+
+</div>
+
+<script>
+
+let noCount = 0;
+
+function sayYes(){
+
+    document.getElementById("mainCard").classList.add("hidden");
+
+    document.getElementById("finalCard").classList.remove("hidden");
+
+    createHearts();
+}
+
+function sayNo(){
+
+    noCount++;
+
+    const noButton = document.getElementById("noBtn");
+
+    if(noCount === 1){
+        noButton.innerText = "Are you sure? 🥺";
+    }
+    else if(noCount === 2){
+        noButton.innerText = "Think again 😭";
+    }
+    else if(noCount === 3){
+        noButton.innerText = "Please Maryam? 🥹";
+    }
+    else{
+        noButton.innerText = "Okay... 😢";
+    }
+}
+
+function createHearts(){
+
+    for(let i=0;i<35;i++){
+
+        const heart=document.createElement("div");
+
+        heart.innerHTML=["❤️","💖","💕","💗"][Math.floor(Math.random()*4)];
+
+        heart.style.position="fixed";
+        heart.style.left=Math.random()*100+"%";
+        heart.style.top=Math.random()*100+"%";
+        heart.style.fontSize=(20+Math.random()*40)+"px";
+        heart.style.pointerEvents="none";
+        heart.style.zIndex="10";
+        heart.style.transition="all 2s ease";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.style.transform=
+            "translateY(-220px) rotate(360deg)";
+            heart.style.opacity="0";
+        },50);
+
+        setTimeout(()=>{
+            heart.remove();
+        },2200);
+    }
+}
+
+</script>
+
+</body>
+</html>
